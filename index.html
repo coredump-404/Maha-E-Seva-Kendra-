@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>महा ई-सेवा केंद्र आणि डिजिटल सेवा</title>
+  <meta name="description" content="महाराष्ट्रातील विश्वासार्ह ई-सेवा केंद्र - सर्व सरकारी प्रमाणपत्रे, दस्तऐवज सेवा जलद आणि सुरक्षित">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919067185465?text=नमस्कार!%20मला%20माहिती%20हवी%20आहे" class="whatsapp-float" target="_blank" aria-label="WhatsApp वर संपर्क करा">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <!-- Notification Bar -->
+  <div class="notification-bar">
+    <div class="container">
+      📢 माहिती मिळवण्यासाठी WhatsApp: <strong>+91 9067185465</strong>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i data-lucide="shield-check"></i>
+          <div class="logo-text">
+            <h1>महा ई-सेवा केंद्र</h1>
+            <p>प्रमाणित सरकारी सेवा केंद्र</p>
+          </div>
+        </div>
+        
+        <nav class="nav" id="mobileMenu">
+          <a href="#home">मुख्यपृष्ठ</a>
+          <a href="#services">सेवा</a>
+          <a href="#process">कार्यप्रणाली</a>
+          <a href="#faq">FAQ</a>
+          <a href="#footer">संपर्क</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="menuBtn" aria-label="मेनू उघडा">
+          <i data-lucide="menu" style="width: 2rem; height: 2rem;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>
+        तुमच्या परिसरातील
+        <span class="highlight">विश्वासार्ह</span>
+        डिजिटल सेवा केंद्र
+      </h1>
+      <p>सरकारी प्रमाणपत्रे, दस्तऐवज सेवा आणि इतर सर्व डिजिटल सेवा जलद आणि विश्वासार्हपणे मिळवा</p>
+      
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary">
+          <i data-lucide="search"></i>
+          सेवा पहा
+        </a>
+        <a href="tel:+919067185465" class="btn btn-secondary">
+          <i data-lucide="phone"></i>
+          कॉल करा
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3>5000+</h3>
+          <p>समाधानी ग्राहक</p>
+        </div>
+        <div class="stat-item">
+          <h3>25+</h3>
+          <p>प्रकारच्या सेवा</p>
+        </div>
+        <div class="stat-item">
+          <h3>4+</h3>
+          <p>वर्षांचा अनुभव</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">आमच्या सेवा</span>
+        <h2 class="section-title">संपूर्ण डिजिटल आणि सरकारी सेवा</h2>
+        <p class="section-description">सर्व प्रकारची सरकारी प्रमाणपत्रे आणि दस्तऐवज एकाच ठिकाणी</p>
+      </div>
+
+      <!-- Service Search -->
+      <div class="service-search">
+        <i data-lucide="search"></i>
+        <input type="text" id="searchServices" placeholder="सेवा शोधा...">
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Category 1: प्रमाणपत्रे व दस्तऐवज -->
+        <div class="service-card blue" data-service="patidar" data-keywords="पतिदार">
+          <div class="flex items-center mb-4">
+            <i data-lucide="file-text" class="service-icon"></i>
+            <h3 class="service-title">पतिदार प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="ownership" data-keywords="मालकी">
+          <div class="flex items-center mb-4">
+            <i data-lucide="home" class="service-icon"></i>
+            <h3 class="service-title">मालकीचे प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="landless" data-keywords="भूमिहीन">
+          <div class="flex items-center mb-4">
+            <i data-lucide="map" class="service-icon"></i>
+            <h3 class="service-title">भूमिहीन प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="residential" data-keywords="रहिवासी दाखला">
+          <div class="flex items-center mb-4">
+            <i data-lucide="map-pin" class="service-icon"></i>
+            <h3 class="service-title">रहिवासी दाखला</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 5-7 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="nationality" data-keywords="राष्ट्रीयत्व">
+          <div class="flex items-center mb-4">
+            <i data-lucide="flag" class="service-icon"></i>
+            <h3 class="service-title">राष्ट्रीयत्व प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 10-15 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="unavailable_land" data-keywords="अपलब्ध भूधारक">
+          <div class="flex items-center mb-4">
+            <i data-lucide="file-x" class="service-icon"></i>
+            <h3 class="service-title">अपलब्ध भूधारक प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="farmer" data-keywords="शेतकरी">
+          <div class="flex items-center mb-4">
+            <i data-lucide="sprout" class="service-icon"></i>
+            <h3 class="service-title">शेतकरी असल्याचे प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <!-- Category 2: निराधार व सामाजिक योजना -->
+        <div class="service-card blue" data-service="shravanbal" data-keywords="श्रवणबाळ निराधार">
+          <div class="flex items-center mb-4">
+            <i data-lucide="users" class="service-icon"></i>
+            <h3 class="service-title">श्रवणबाळ निराधार योजना</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 15-20 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="sanjay_gandhi" data-keywords="संजय गांधी निराधार">
+          <div class="flex items-center mb-4">
+            <i data-lucide="heart-handshake" class="service-icon"></i>
+            <h3 class="service-title">संजय गांधी निराधार योजना</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 15-20 दिवस</p>
+        </div>
+
+        <!-- Category 3: EWS व आर्थिक सेवा -->
+        <div class="service-card blue" data-service="ews_affidavit" data-keywords="EWS शपथपत्र">
+          <div class="flex items-center mb-4">
+            <i data-lucide="file-check" class="service-icon"></i>
+            <h3 class="service-title">EWS शपथपत्र प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 5-7 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="ews" data-keywords="EWS">
+          <div class="flex items-center mb-4">
+            <i data-lucide="trending-up" class="service-icon"></i>
+            <h3 class="service-title">EWS प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="ept" data-keywords="EPT">
+          <div class="flex items-center mb-4">
+            <i data-lucide="wallet" class="service-icon"></i>
+            <h3 class="service-title">EPT चे प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 7-10 दिवस</p>
+        </div>
+
+        <!-- Category 4: ओळख व कायदेशीर सेवा -->
+        <div class="service-card blue" data-service="non_criminal" data-keywords="नॉन क्रिमिनल पोलीस">
+          <div class="flex items-center mb-4">
+            <i data-lucide="shield-check" class="service-icon"></i>
+            <h3 class="service-title">नॉन क्रिमिनल प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 15-21 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="caste" data-keywords="जात">
+          <div class="flex items-center mb-4">
+            <i data-lucide="user-check" class="service-icon"></i>
+            <h3 class="service-title">जात प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 10-15 दिवस</p>
+        </div>
+
+        <div class="service-card blue" data-service="central_caste" data-keywords="केंद्रीय जात">
+          <div class="flex items-center mb-4">
+            <i data-lucide="shield" class="service-icon"></i>
+            <h3 class="service-title">केंद्रीय जात प्रमाणपत्र</h3>
+          </div>
+          <p style="opacity: 0.9; font-size: 0.9rem;">सुमारे वेळ: 15-21 दिवस</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">कसे काम करते</span>
+        <h2 class="section-title">साध्या पायऱ्यांमध्ये दस्तऐवज मिळवा</h2>
+        <p class="section-description">आमची कार्यप्रणाली सोपी, जलद आणि पारदर्शक आहे</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <div class="process-icon">
+            <i data-lucide="clipboard-list"></i>
+          </div>
+          <h3>दस्तऐवज सबमिट करा</h3>
+          <p>आवश्यक कागदपत्रे आमच्याकडे जमा करा</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <div class="process-icon">
+            <i data-lucide="search-check"></i>
+          </div>
+          <h3>तपासणी व पडताळणी</h3>
+          <p>आम्ही तुमचे दस्तऐवज तपासतो</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <div class="process-icon">
+            <i data-lucide="send"></i>
+          </div>
+          <h3>ऑनलाईन अर्ज</h3>
+          <p>सरकारी पोर्टलवर अर्ज करतो</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <div class="process-icon">
+            <i data-lucide="check-circle"></i>
+          </div>
+          <h3>दस्तऐवज प्राप्त करा</h3>
+          <p>तुमचे दस्तऐवज तुम्हाला मिळतील</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title">वारंवार विचारले जाणारे प्रश्न</h2>
+        <p class="section-description">तुमच्या प्रश्नांची उत्तरे येथे शोधा</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>दस्तऐवज मिळण्यास किती वेळ लागतो?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>दस्तऐवजाच्या प्रकारावर अवलंबून 5 ते 21 दिवस लागतात. प्रत्येक सेवेची अंदाजित वेळ सेवा कार्डवर दर्शविली आहे.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>शुल्क किती आहे?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>शुल्क दस्तऐवजाच्या प्रकारावर अवलंबून असते. अचूक माहितीसाठी कृपया आमच्याशी WhatsApp वर संपर्क साधा: +91 9067185465</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>दस्तऐवज कसे पाठवावे?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>तुम्ही दस्तऐवज WhatsApp वर पाठवू शकता किंवा थेट आमच्या कार्यालयात येऊन जमा करू शकता. आमचा पत्ता: इस्पुर्ली, कोल्हापूर</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>अर्ज ट्रॅक कसा करावा?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>अर्ज सबमिट केल्यावर तुम्हाला संदर्भ क्रमांक मिळेल. त्या नंबरसह आम्हाला संपर्क करून स्टेटस जाणून घेऊ शकता.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>तुमचे कार्यालय कुठे आहे?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>महा ई-सेवा केंद्र<br>इस्पुर्ली, कोल्हापूर, महाराष्ट्र - 416207<br>फोन: +91 9067185465</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wizard Modal -->
+  <div class="wizard-modal" id="wizardModal">
+    <div class="wizard-container">
+      <!-- Wizard Header -->
+      <div class="wizard-header">
+        <button class="wizard-close" id="closeWizard" aria-label="बंद करा">
+          <i data-lucide="x"></i>
+        </button>
+        <h2 class="wizard-title" id="wizardTitle">सेवा अर्ज</h2>
+        <p class="wizard-subtitle">कृपया आवश्यक माहिती भरा</p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="wizard-progress">
+        <div class="progress-step active" data-step="1">
+          <div class="progress-circle">1</div>
+          <div class="progress-label">आवश्यक दस्तऐवज</div>
+        </div>
+        <div class="progress-step" data-step="2">
+          <div class="progress-circle">2</div>
+          <div class="progress-label">वैयक्तिक माहिती</div>
+        </div>
+        <div class="progress-step" data-step="3">
+          <div class="progress-circle">3</div>
+          <div class="progress-label">पुष्टीकरण</div>
+        </div>
+      </div>
+
+      <!-- Wizard Body -->
+      <div class="wizard-body">
+        <!-- Step 1: Required Documents -->
+        <div class="wizard-step active" data-step="1">
+          <h3 class="step-title">आवश्यक दस्तऐवज</h3>
+          <p class="step-description">कृपया खालील दस्तऐवज तयार ठेवा:</p>
+          
+          <ul class="document-list" id="documentList">
+            <!-- Documents will be loaded dynamically -->
+          </ul>
+
+          <div class="info-box">
+            <h4><i data-lucide="info"></i> महत्वाची माहिती</h4>
+            <p>सर्व दस्तऐवज स्पष्ट आणि वाचनीय असावेत. कोणतेही कटिंग किंवा ओव्हररायटिंग नसावे.</p>
+          </div>
+        </div>
+
+        <!-- Step 2: Personal Information -->
+        <div class="wizard-step" data-step="2">
+          <h3 class="step-title">वैयक्तिक माहिती</h3>
+          <p class="step-description">कृपया तुमची माहिती भरा:</p>
+
+          <form id="personalInfoForm">
+            <div class="form-group">
+              <label>पूर्ण नाव *</label>
+              <input type="text" id="fullName" required placeholder="तुमचे पूर्ण नाव">
+            </div>
+
+            <div class="form-group">
+              <label>मोबाईल नंबर *</label>
+              <input type="tel" id="mobile" required placeholder="10 अंकी मोबाईल नंबर" pattern="[0-9]{10}">
+            </div>
+
+            <div class="form-group">
+              <label>पत्ता *</label>
+              <textarea id="address" required rows="3" placeholder="तुमचा संपूर्ण पत्ता"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div class="wizard-step" data-step="3">
+          <h3 class="step-title">पुष्टीकरण</h3>
+          <p class="step-description">कृपया तुमची माहिती तपासा:</p>
+
+          <div class="info-box">
+            <h4><i data-lucide="check-circle"></i> तुमची माहिती</h4>
+            <p><strong>सेवा:</strong> <span id="confirmService"></span></p>
+            <p><strong>नाव:</strong> <span id="confirmName"></span></p>
+            <p><strong>मोबाईल:</strong> <span id="confirmMobile"></span></p>
+            <p><strong>पत्ता:</strong> <span id="confirmAddress"></span></p>
+          </div>
+
+          <div class="info-box">
+            <h4><i data-lucide="alert-circle"></i> पुढील पायरी</h4>
+            <p>सबमिट केल्यानंतर आमचा प्रतिनिधी तुमच्याशी 24 तासांच्या आत संपर्क साधेल. कृपया आवश्यक दस्तऐवज तयार ठेवा.</p>
+          </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="wizard-step" data-step="4">
+          <div class="success-message">
+            <div class="success-icon">
+              <i data-lucide="check"></i>
+            </div>
+            <h3 class="step-title">अर्ज यशस्वीरित्या सबमिट झाला!</h3>
+            <p class="step-description">धन्यवाद! आमचा प्रतिनिधी लवकरच तुमच्याशी संपर्क साधेल.</p>
+            <p style="margin-top: 1rem;"><strong>संदर्भ क्रमांक:</strong> <span id="referenceNumber"></span></p>
+            <p style="margin-top: 1rem;">अपेक्षित वेळ: <strong><span id="expectedTime"></span></strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wizard Footer -->
+      <div class="wizard-footer">
+        <button class="wizard-btn wizard-btn-prev" id="prevBtn" style="display: none;">
+          <i data-lucide="arrow-left"></i>
+          मागे
+        </button>
+        <button class="wizard-btn wizard-btn-next" id="nextBtn">
+          पुढे
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button class="wizard-btn wizard-btn-submit" id="submitBtn" style="display: none;">
+          <i data-lucide="send"></i>
+          WhatsApp वर पाठवा
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i data-lucide="shield-check"></i>
+          <h3>महा ई-सेवा केंद्र</h3>
+          <p style="margin-top: 0.5rem; opacity: 0.8;">सरकार मान्यताप्राप्त सेवा केंद्र</p>
+        </div>
+        <div class="footer-col">
+          <h4>मुख्य मेनू</h4>
+          <ul>
+            <li><a href="#home">मुख्यपृष्ठ</a></li>
+            <li><a href="#services">सेवा</a></li>
+            <li><a href="#process">कार्यप्रणाली</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div id="contact" class="footer-col">
+          <h4>संपर्क</h4>
+          <p><i data-lucide="mail" style="width:16px;height:16px;display:inline;margin-right:5px;"></i> prashantmagdum72@gmail.com</p>
+          <p><i data-lucide="phone" style="width:16px;height:16px;display:inline;margin-right:5px;"></i> +91 9067185465</p>
+          <p><i data-lucide="message-circle" style="width:16px;height:16px;display:inline;margin-right:5px;"></i> WhatsApp: +91 9067185465</p>
+        </div>
+        <div class="footer-col">
+          <h4>पत्ता</h4>
+          <p>महा ई-सेवा केंद्र<br>इस्पुर्ली, कोल्हापूर<br>महाराष्ट्र, 416207</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 महा ई-सेवा केंद्र. सर्व हक्क राखीव.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
